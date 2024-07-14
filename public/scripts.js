@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         body: formData,
       });
+
+      if (!file) {
+        alert("Please select a file to upload");
+        return;
+      }
+
       if (response.ok) {
         console.log("File uploaded and processed successfully");
         fetchTasks();

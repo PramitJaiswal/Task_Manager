@@ -1,20 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #00bbff; /* Softer background color */
     margin: 0;
     padding: 20px;
+    color: #e0f7fa;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(2, 67, 0); /* Softer container color */
+    padding: 30px; /* Increased padding for better spacing */
+    box-shadow: 0 4px 15px rgb(60, 255, 0); /* Softer and more natural shadow */
+    border-radius: 10px; /* Rounded corners for a modern look */
 }
 
 h1 {
     text-align: center;
+    color: #ff0000; /* More vibrant color for the heading */
 }
 
 #task-list {
@@ -23,11 +26,56 @@ h1 {
 }
 
 #task-list li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 15px; /* Increased padding for better spacing */
+    border-bottom: 1px solid #eeeeee; /* Softer border color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-list li:last-child {
+    border-bottom: none; /* Remove the bottom border of the last item */
+}
+
+#task-list li:hover {
+    background-color: #060b00; /* Light background color on hover */
 }
 
 form {
-    margin-top: 20px;
+    margin-top: 30px; /* Increased margin for better spacing */
     text-align: center;
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 60%;
+}
+
+input[type="submit"] {
+    background-color: #ff5722;
+    color: #0000ff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #e64a19;
+}
+
+/* Add responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
 }

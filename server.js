@@ -19,22 +19,22 @@ const upload = multer({
 app.use(express.json());
 app.use(express.static("public"));
 
-let tasks = [
-  {
-    id: 1,
-    title: "Task 1",
-    description: "Description 1",
-    status: "Pending",
-    pdf: null,
-  },
-  {
-    id: 2,
-    title: "Task 2",
-    description: "Description 2",
-    status: "Completed",
-    pdf: null,
-  },
-];
+let tasks = [];
+  // {
+  //   id: 1,
+  //   title: "Task 1",
+  //   description: "Description 1",
+  //   status: "Pending",
+  //   pdf: null,
+  // },
+  // {
+  //   id: 2,
+  //   title: "Task 2",
+  //   description: "Description 2",
+  //   status: "Completed",
+  //   pdf: null,
+  // },
+// ];
 
 app.get("/tasks", (req, res) => {
   res.json(tasks);
